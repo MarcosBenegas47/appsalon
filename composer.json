@@ -1,0 +1,19 @@
+{
+    "name": "madara/app-salon_php_mvc_js_sass",
+    "description": "proyecto php8, sass, gulp, sql",
+    "type": "project",
+    "authors": [
+        {
+            "name": "MarcosBenegas47",
+            "email": "96033830+MarcosBenegas47@users.noreply.github.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "MVC\\" : "./",
+            "Controllers\\" : "./controllers",
+            "Model\\" : "./models"
+        }
+    }
+}
