@@ -8,12 +8,15 @@
             "email": "96033830+MarcosBenegas47@users.noreply.github.com"
         }
     ],
-    "require": {},
+    "require": {
+        "phpmailer/phpmailer": "^6.8"
+    },
     "autoload": {
         "psr-4": {
             "MVC\\" : "./",
             "Controllers\\" : "./controllers",
-            "Model\\" : "./models"
+            "Model\\" : "./models",
+            "Classes\\": "./classes"
         }
     }
 }

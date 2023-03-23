@@ -39,11 +39,29 @@ class Usuario extends ActiveRecord{
         }
         if(!$this->password){
             self::$alertas['error'][] = 'El password del cliente es obligatorio';
+        }else if(strlen($this->password) < 6){
+            self::$alertas['error'][] = 'El password debe contener al menos 6 caracteres';
+
         }
         if(!$this->telefono){
             self::$alertas['error'][] = 'El telefono del cliente es obligatorio';
         }
 
         return self::$alertas;
+    }
+    //revisa si el usuario existe
+    public function existeUsuario(){
+        $query = "SELECT * FROM ".self::$tabla." WHERE email = '".$this->email ."' LIMIT 1";
+        $resultado = self::$db->query($query);
+        if($resultado->num_rows){
+            self::$alertas['error'][] = 'El usuario ya existe';
+        }
+        return $resultado;
+    }
+    public function hashPassword(){
+        $this->password = password_hash($this->password,PASSWORD_BCRYPT);
+    }
+    public function crearToken(){
+        $this->token = uniqid();
     }
 }

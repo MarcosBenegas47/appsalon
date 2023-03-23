@@ -1,7 +1,9 @@
 <h1 class="nombre-pagina">Crear cuenta</h1>
 <p class="descripcion-pagina">Llena el sigu¡ente formulario</p>
 
-<?php debuguear($alertas) ?>
+<?php 
+include_once __DIR__."/../templates/alertas.php";
+?>
 <form action="/crear-cuenta" method="POST" class="formulario">
     <div class="campo">
         <label for="nombre">Nombre</label>
