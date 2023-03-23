@@ -9,6 +9,6 @@ function debuguear($variable) : string {
 
 // Escapa / Sanitizar el HTML
 function s($html) : string {
-    $s = htmlspecialchars($html);
+    $s = htmlspecialchars($html ?? '');
     return $s;
 }

@@ -48,7 +48,7 @@ class LoginController{
             'alertas' =>$alertas
         ]);
     }
-    public function confirmar(){
+    public static function confirmar(){
         echo "desde confimar";
     }
 }

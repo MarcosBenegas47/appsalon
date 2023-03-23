@@ -4,8 +4,8 @@ namespace MVC;
 
 class Router
 {
-    public $getRoutes = [];
-    public $postRoutes = [];
+    public array $getRoutes = [];
+    public array $postRoutes = [];
 
     public function get($url, $fn)
     {
