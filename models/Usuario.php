@@ -89,4 +89,13 @@ class Usuario extends ActiveRecord{
             return $resultado;
         }
     }
+    public function validarPassword(){
+        if(!$this->password){
+            self::$alertas['error'][] = 'La Contraseña es obligatoria';   
+        }
+        if(strlen($this->password) < 6){
+            self::$alertas['error'][] = 'El password debe contener al menos 6 caracteres';
+        }
+        return self::$alertas;
+    }
 }
