@@ -22,7 +22,6 @@ class LoginController{
                         //autenticar el usuario
                         if(!isset($_SESSION)){
                             session_start();
-                        
                         }
                         $_SESSION['id']= $usuario->id;
                         $_SESSION['nombre'] = $usuario->nombre. " " . $usuario->apellido;
