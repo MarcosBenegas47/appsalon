@@ -1,6 +1,8 @@
 <?php
 
-$db = mysqli_connect('127.0.0.1', 'root', 'root', 'appsalon_mvc');
+
+
+$db = mysqli_connect($_ENV['DB_HOST'], $_ENV['DB_USER'], $_ENV['DB_PASS'], $_ENV['DB_DB']);
 
 if (!$db) {
     echo "Error: No se pudo conectar a MySQL.";
